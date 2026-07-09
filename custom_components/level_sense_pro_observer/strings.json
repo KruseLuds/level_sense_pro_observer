@@ -1,0 +1,67 @@
+{
+  "title": "Level Sense Pro Observer",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Level Sense Pro Observer",
+        "description": "Configure the transparent observer proxy.",
+        "data": {
+          "listen_host": "Listen host",
+          "listen_port": "Listen port",
+          "upstream_host_header": "Cloud hostname",
+          "upstream_host": "Cloud IP address override (optional)",
+          "upstream_port": "Cloud port",
+          "log_payloads": "Log raw payloads",
+          "show_raw_sensors": "Create raw telemetry sensors"
+        },
+        "data_description": {
+          "listen_host": "Address Home Assistant listens on. Use 0.0.0.0 for all interfaces.",
+          "listen_port": "Port the Level Sense Pro connects to.",
+          "upstream_host_header": "Vendor cloud hostname sent in the HTTP Host header.",
+          "upstream_host": "Normally leave blank. When blank, the observer resolves the cloud hostname automatically while bypassing local DNS rewrites. Enter an IP address only for testing or troubleshooting.",
+          "upstream_port": "Vendor cloud HTTP port.",
+          "log_payloads": "Write every raw device payload to the Home Assistant log. Use only for troubleshooting.",
+          "show_raw_sensors": "Create additional raw telemetry entities for every observed raw channel."
+        }
+      },
+      "reconfigure": {
+        "title": "Level Sense Pro Observer connection settings",
+        "description": "Update proxy and cloud connection settings.",
+        "data": {
+          "listen_host": "Listen host",
+          "listen_port": "Listen port",
+          "upstream_host_header": "Cloud hostname",
+          "upstream_host": "Cloud IP address override (optional)",
+          "upstream_port": "Cloud port"
+        },
+        "data_description": {
+          "listen_host": "Address Home Assistant listens on. Use 0.0.0.0 for all interfaces.",
+          "listen_port": "Port the Level Sense Pro connects to.",
+          "upstream_host_header": "Vendor cloud hostname sent in the HTTP Host header.",
+          "upstream_host": "Normally leave blank. When blank, the observer resolves the cloud hostname automatically while bypassing local DNS rewrites. Enter an IP address only for testing or troubleshooting.",
+          "upstream_port": "Vendor cloud HTTP port."
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Level Sense Pro Observer is already configured.",
+      "unknown": "The selected configuration entry could not be found."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Level Sense Pro Observer options",
+        "description": "Change diagnostic and advanced entity options.",
+        "data": {
+          "log_payloads": "Log raw payloads",
+          "show_raw_sensors": "Create raw telemetry sensors"
+        },
+        "data_description": {
+          "log_payloads": "Write every raw device payload to the Home Assistant log. Use only for troubleshooting.",
+          "show_raw_sensors": "Create additional raw telemetry entities for every observed raw channel."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a problem with Level Sense Pro Observer
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem.
+    validations:
+      required: true
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version
+    validations:
+      required: true
+  - type: input
+    id: integration_version
+    attributes:
+      label: Integration version
+    validations:
+      required: true
+  - type: dropdown
+    id: dns_tool
+    attributes:
+      label: DNS rewrite tool
+      options:
+        - AdGuard Home
+        - Pi-hole
+        - pfSense
+        - OPNsense
+        - UniFi
+        - MikroTik
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      render: text
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Paste or attach diagnostics if comfortable sharing them.
