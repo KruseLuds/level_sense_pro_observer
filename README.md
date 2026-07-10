@@ -74,31 +74,16 @@ local visibility.
 
 ## Capability Comparison
 
-  --------------------------------------------------------------------------
-  Capability    Vendor Cloud   Local Replacement   Level Sense Pro Observer
-  ------------- ------------- ------------------- --------------------------
-  Mobile App         ✅               ❌                      ✅
-
-  Vendor             ✅               ❌                      ✅
-  Website                                         
-
-  Cloud Alerts       ✅               ❌                      ✅
-
-  Firmware           ✅               ❌                      ✅
-  Updates                                         
-
-  Home               ❌               ✅                      ✅
-  Assistant                                       
-  Entities                                        
-
-  Local              ❌               ✅                      ✅
-  Automations                                     
-
-  Local History      ❌               ✅                      ✅
-
-  Diagnostics        ❌               ✅                      ✅
-  --------------------------------------------------------------------------
-
+| Capability | Vendor Cloud | Local Replacement | Level Sense Pro Observer |
+|---|:---:|:---:|:---:|
+| Mobile App | ✅ | ❌ | ✅ |
+| Vendor Website | ✅ | ❌ | ✅ |
+| Cloud Alerts | ✅ | ❌ | ✅ |
+| Firmware Updates | ✅ | ❌ | ✅ |
+| Home Assistant Entities | ❌ | ✅ | ✅ |
+| Local Automations | ❌ | ✅ | ✅ |
+| Local History | ❌ | ✅ | ✅ |
+| Diagnostics | ❌ | ✅ | ✅ |
 ## Project Status
 
 -   Production-ready architecture
@@ -158,30 +143,28 @@ cloud or control the device.
 
 ### Sensors
 
-  Entity                    Description
-  ------------------------- -------------------------------------------------
-  Temperature               Corrected average device temperature
-  Humidity                  Average humidity
-  Battery Voltage           Average battery voltage
-  RSSI                      Average Wi-Fi signal
-  Runtime                   Device reported runtime
-  Packet Count              Number of observed packets
-  Last Seen                 Last device packet time
-  Cloud Status              HTTP status returned by the Level Sense cloud
-  Cloud Result              Parsed cloud result, such as `success`
-  Cloud Has Config Update   Cloud configuration update flag
-  Cloud Latency             Time to complete the upstream cloud transaction
-
+| Entity | Description |
+|---|---|
+| Temperature | Corrected average device temperature |
+| Humidity | Average humidity |
+| Battery Voltage | Average battery voltage |
+| RSSI | Average Wi-Fi signal |
+| Runtime | Device-reported runtime |
+| Packet Count | Number of observed packets |
+| Last Seen | Time of the last device packet |
+| Cloud Status | HTTP status returned by the Level Sense cloud |
+| Cloud Result | Parsed cloud result, such as `success` |
+| Cloud Has Config Update | Cloud configuration update flag |
+| Cloud Latency | Time to complete the upstream cloud transaction |
 ### Binary Sensors
 
-  Entity          Description
-  --------------- ---------------------------------------------
-  Relay State     Raw relay state exposed as a binary sensor
-  Siren State     Raw siren state exposed as a binary sensor
-  Device State    Raw device state exposed as a binary sensor
-  Alarm Silence   Alarm silence state
-  Debug Mode      Debug mode when reported by firmware
-
+| Entity | Description |
+|---|---|
+| Relay State | Raw relay state exposed as a binary sensor |
+| Siren State | Raw siren state exposed as a binary sensor |
+| Device State | Raw device state exposed as a binary sensor |
+| Alarm Silence | Alarm silence state |
+| Debug Mode | Debug mode when reported by firmware |
 ### Optional raw telemetry sensors
 
 When enabled, the integration can also create raw entities for each
