@@ -74,31 +74,30 @@ local visibility.
 
 ## Capability Comparison
 
-  -------------------------------------------------------------------------
-  Capability       Vendor Cloud      Local Replacement    Level Sense Pro
-                                                             Observer
-  ------------- ------------------- ------------------- -------------------
-  Mobile App            ✅                  ❌                  ✅
+  --------------------------------------------------------------------------
+  Capability    Vendor Cloud   Local Replacement   Level Sense Pro Observer
+  ------------- ------------- ------------------- --------------------------
+  Mobile App         ✅               ❌                      ✅
 
-  Vendor                ✅                  ❌                  ✅
-  Website                                               
+  Vendor             ✅               ❌                      ✅
+  Website                                         
 
-  Cloud Alerts          ✅                  ❌                  ✅
+  Cloud Alerts       ✅               ❌                      ✅
 
-  Firmware              ✅                  ❌                  ✅
-  Updates                                               
+  Firmware           ✅               ❌                      ✅
+  Updates                                         
 
-  Home                  ❌                  ✅                  ✅
-  Assistant                                             
-  Entities                                              
+  Home               ❌               ✅                      ✅
+  Assistant                                       
+  Entities                                        
 
-  Local                 ❌                  ✅                  ✅
-  Automations                                           
+  Local              ❌               ✅                      ✅
+  Automations                                     
 
-  Local History         ❌                  ✅                  ✅
+  Local History      ❌               ✅                      ✅
 
-  Diagnostics           ❌                  ✅                  ✅
-  -------------------------------------------------------------------------
+  Diagnostics        ❌               ✅                      ✅
+  --------------------------------------------------------------------------
 
 ## Project Status
 
@@ -155,7 +154,7 @@ The observer is intentionally passive. It watches the traffic and
 exposes data to Home Assistant, but it does not attempt to replace the
 cloud or control the device.
 
-## What you get locally
+## Local Home Assistant Entities
 
 ### Sensors
 
@@ -173,7 +172,7 @@ cloud or control the device.
   Cloud Has Config Update   Cloud configuration update flag
   Cloud Latency             Time to complete the upstream cloud transaction
 
-### Binary sensors
+### Binary Sensors
 
   Entity          Description
   --------------- ---------------------------------------------
