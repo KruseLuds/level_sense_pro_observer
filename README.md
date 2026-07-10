@@ -233,8 +233,6 @@ polished entities.
 | `sensor.level_sense_pro_raw_rssi_1` | -30 to -90 dBm | ✗ | ✗ | ✓ | Current Wi-Fi RSSI. |
 | `sensor.level_sense_pro_raw_rssi_2` | Similar | ✗ | ✗ | ✓ | Minimum RSSI during reporting interval. |
 | `sensor.level_sense_pro_raw_rssi_3` | Similar | ✗ | ✗ | ✓ | Maximum RSSI during reporting interval. |
-| `device_tracker.basement_level_sense_pro` | home / not_home | ✓ | ✓ | ✗ | Device presence entity. |
-| `device_tracker.basement_level_sense_pro_2` | home / not_home | ✓ | ✓ | ✗ | Additional device tracker. |
 | `button.basement_level_sense_pro_reconnect` | N/A | ✓ | ✓ | ✗ | Requests the Observer to reconnect to the upstream cloud. |
 | `update.level_sense_pro_observer_update` | on / off | ✓ | ✓ | ✗ | Indicates whether an integration update is available. |
 
