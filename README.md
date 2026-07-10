@@ -181,6 +181,64 @@ telemetry channel, such as:
 Raw sensors are disabled by default because most users only need the
 polished entities.
 
+
+
+## Complete Entity Reference
+
+| Entity ID | Typical Value / Range | Derived by this Integration | Non-Raw | Raw | Detailed Definition |
+|---|:---:|:---:|:---:|:---:|---|
+| `sensor.level_sense_pro_temperature` | 40-100 °F | ✓ | ✓ | ✗ | Corrected ambient temperature. The integration compensates for the known internal temperature offset before exposing the value. |
+| `sensor.level_sense_pro_humidity` | 0-100 %RH | ✓ | ✓ | ✗ | Average relative humidity reported by the device. |
+| `sensor.level_sense_pro_battery_voltage` | ~3.5-4.2 V | ✓ | ✓ | ✗ | Average internal backup battery voltage. Useful for battery health monitoring. |
+| `sensor.level_sense_pro_rssi` | -30 to -90 dBm | ✓ | ✓ | ✗ | Average Wi-Fi signal strength. Higher (less negative) values indicate a stronger connection. |
+| `sensor.level_sense_pro_runtime` | Seconds | ✗ | ✓ | ✗ | Device reported runtime counter. Appears to represent elapsed device runtime since startup. |
+| `sensor.level_sense_pro_packet_count` | Increasing integer | ✓ | ✓ | ✗ | Number of telemetry packets processed by the Observer since startup. |
+| `sensor.level_sense_pro_last_seen` | Timestamp | ✓ | ✓ | ✗ | Time the last telemetry packet was received. |
+| `sensor.level_sense_pro_cloud_status` | 200 | ✓ | ✓ | ✗ | HTTP status returned by the upstream cloud. |
+| `sensor.level_sense_pro_cloud_result` | success / fail | ✓ | ✓ | ✗ | Parsed cloud response result. |
+| `sensor.level_sense_pro_cloud_has_config_update` | 0 / 1 | ✓ | ✓ | ✗ | Indicates whether the cloud has a pending configuration update. |
+| `sensor.level_sense_pro_cloud_latency` | Milliseconds | ✓ | ✓ | ✗ | Round-trip time between the Observer and the cloud. |
+| `binary_sensor.level_sense_pro_relay_state` | on / off | ✗ | ✓ | ✗ | Internal dry-contact relay output. Not the sump pump motor state. |
+| `binary_sensor.level_sense_pro_siren_state` | on / off | ✗ | ✓ | ✗ | Internal audible alarm state. |
+| `binary_sensor.level_sense_pro_device_state` | on / off | ✗ | ✓ | ✗ | Device status/fault indication. Exact meanings are still being investigated. |
+| `binary_sensor.level_sense_pro_alarm_silence` | on / off | ✗ | ✓ | ✗ | Indicates whether alarms have been silenced. |
+| `binary_sensor.level_sense_pro_debug_mode` | on / off / unknown | ✓ | ✓ | ✗ | Observer diagnostic indicator, not native device telemetry. |
+| `sensor.level_sense_pro_raw_sample_elapsed_ms` | ~120000-140000 | ✗ | ✗ | ✓ | Raw elapsed sample interval in milliseconds. |
+| `sensor.level_sense_pro_raw_run_t` | Seconds | ✗ | ✗ | ✓ | Raw runtime counter from the device. |
+| `sensor.level_sense_pro_raw_relay_state` | 0 / 1 | ✗ | ✗ | ✓ | Raw relay output flag. |
+| `sensor.level_sense_pro_raw_device_state` | 0 / higher | ✗ | ✗ | ✓ | Raw device status field. Zero currently appears normal. |
+| `sensor.level_sense_pro_raw_siren_state` | 0 / 1 | ✗ | ✗ | ✓ | Raw siren state. |
+| `sensor.level_sense_pro_raw_alarm_silence` | 0 / 1 | ✗ | ✗ | ✓ | Raw alarm silence flag. |
+| `sensor.level_sense_pro_raw_cap_sense_1` | ~400-900 | ✗ | ✗ | ✓ | Current raw capacitive water-depth measurement. |
+| `sensor.level_sense_pro_raw_cap_sense_2` | Similar | ✗ | ✗ | ✓ | Minimum raw capacitive reading during the reporting interval (believed). |
+| `sensor.level_sense_pro_raw_cap_sense_3` | Similar | ✗ | ✗ | ✓ | Maximum raw capacitive reading during the reporting interval (believed). |
+| `sensor.level_sense_pro_raw_cycle_count_1` | Integer | ✗ | ✗ | ✓ | Current cycle counter. Exact purpose unknown. |
+| `sensor.level_sense_pro_raw_cycle_count_2` | Integer | ✗ | ✗ | ✓ | Minimum cycle counter during reporting interval. |
+| `sensor.level_sense_pro_raw_cycle_count_3` | Integer | ✗ | ✗ | ✓ | Maximum cycle counter during reporting interval. |
+| `sensor.level_sense_pro_raw_temperature_c_1` | Device reading | ✗ | ✗ | ✓ | Current uncorrected temperature reported by the firmware. |
+| `sensor.level_sense_pro_raw_temperature_c_2` | Device reading | ✗ | ✗ | ✓ | Minimum raw temperature during reporting interval. |
+| `sensor.level_sense_pro_raw_temperature_c_3` | Device reading | ✗ | ✗ | ✓ | Maximum raw temperature during reporting interval. |
+| `sensor.level_sense_pro_raw_humidity_1` | 0-100 | ✗ | ✗ | ✓ | Current raw humidity. |
+| `sensor.level_sense_pro_raw_humidity_2` | 0-100 | ✗ | ✗ | ✓ | Minimum raw humidity during reporting interval. |
+| `sensor.level_sense_pro_raw_humidity_3` | 0-100 | ✗ | ✗ | ✓ | Maximum raw humidity during reporting interval. |
+| `sensor.level_sense_pro_raw_battery_vdc_1` | ~3.5-4.2 V | ✗ | ✗ | ✓ | Current backup battery voltage. |
+| `sensor.level_sense_pro_raw_battery_vdc_2` | Similar | ✗ | ✗ | ✓ | Minimum battery voltage during reporting interval. |
+| `sensor.level_sense_pro_raw_battery_vdc_3` | Similar | ✗ | ✗ | ✓ | Maximum battery voltage during reporting interval. |
+| `sensor.level_sense_pro_raw_input_1_1` | ~1400 dry | ✗ | ✗ | ✓ | Current Input 1 analog reading. Believed to represent the leak sensor input. Lower values indicate activation. |
+| `sensor.level_sense_pro_raw_input_1_2` | Similar | ✗ | ✗ | ✓ | Minimum Input 1 reading during reporting interval. |
+| `sensor.level_sense_pro_raw_input_1_3` | Similar | ✗ | ✗ | ✓ | Maximum Input 1 reading during reporting interval. |
+| `sensor.level_sense_pro_raw_input_2_1` | ~1400 dry | ✗ | ✗ | ✓ | Current Input 2 analog reading. Believed to represent the float-switch input. Lower values indicate activation. |
+| `sensor.level_sense_pro_raw_input_2_2` | Similar | ✗ | ✗ | ✓ | Minimum Input 2 reading during reporting interval. |
+| `sensor.level_sense_pro_raw_input_2_3` | Similar | ✗ | ✗ | ✓ | Maximum Input 2 reading during reporting interval. |
+| `sensor.level_sense_pro_raw_rssi_1` | -30 to -90 dBm | ✗ | ✗ | ✓ | Current Wi-Fi RSSI. |
+| `sensor.level_sense_pro_raw_rssi_2` | Similar | ✗ | ✗ | ✓ | Minimum RSSI during reporting interval. |
+| `sensor.level_sense_pro_raw_rssi_3` | Similar | ✗ | ✗ | ✓ | Maximum RSSI during reporting interval. |
+| `device_tracker.basement_level_sense_pro` | home / not_home | ✓ | ✓ | ✗ | Device presence entity. |
+| `device_tracker.basement_level_sense_pro_2` | home / not_home | ✓ | ✓ | ✗ | Additional device tracker. |
+| `button.basement_level_sense_pro_reconnect` | N/A | ✓ | ✓ | ✗ | Requests the Observer to reconnect to the upstream cloud. |
+| `update.level_sense_pro_observer_update` | on / off | ✓ | ✓ | ✗ | Indicates whether an integration update is available. |
+
+
 ## Installation
 
 See [INSTALL.md](INSTALL.md) for detailed installation and verification
