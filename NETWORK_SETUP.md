@@ -39,10 +39,10 @@ Add:
 
 ``` text
 Domain: cloud.level-sense.com
-Answer: 192.168.0.34
+Answer: 192.168.0.##
 ```
 
-Replace `192.168.0.34` with your Home Assistant IP address.
+Replace `192.168.0.##` with your Home Assistant IP address.
 
 ## Pi-hole example
 
@@ -55,7 +55,7 @@ Local DNS -> DNS Records
 Add:
 
 ``` text
-cloud.level-sense.com -> 192.168.0.34
+cloud.level-sense.com -> 192.168.0.##
 ```
 
 ## pfSense or OPNsense
@@ -65,7 +65,7 @@ Use DNS Resolver or DNS Forwarder host overrides:
 ``` text
 Host: cloud
 Domain: level-sense.com
-IP: 192.168.0.34
+IP: 192.168.0.##
 ```
 
 ## UniFi DNS
@@ -79,7 +79,7 @@ can perform the rewrite.
 Add a static DNS entry:
 
 ``` text
-/ip dns static add name=cloud.level-sense.com address=192.168.0.34
+/ip dns static add name=cloud.level-sense.com address=192.168.0.##
 ```
 
 ## Firewall requirements
