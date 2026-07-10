@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.0.0
+
+### Added
+
+- First stable release.
+- Transparent local observation while preserving Level Sense cloud functionality.
+- Native Home Assistant sensors and binary sensors.
+- Automatic upstream DNS resolution that avoids local rewrite loops.
+- Optional raw telemetry entities.
+- Diagnostics and runtime state persistence.
+- Specific definitions/details regarding every sensor to README.
+
+### Fixed
+
+- Corrected GitHub documentation, issue tracker, and code owner links.
+
 ## 0.4.0
 
 Initial public preview candidate.

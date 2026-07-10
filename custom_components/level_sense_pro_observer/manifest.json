@@ -1,9 +1,9 @@
 {
   "domain": "level_sense_pro_observer",
   "name": "Level Sense Pro Observer",
-  "version": "0.4.0",
-  "documentation": "https://github.com/rkludington/level_sense_pro_observer",
-  "issue_tracker": "https://github.com/rkludington/level_sense_pro_observer/issues",
+  "version": "1.0.0",
+  "documentation": "https://github.com/KruseLuds/level_sense_pro_observer",
+  "issue_tracker": "https://github.com/KruseLuds/level_sense_pro_observer/issues",
   "codeowners": [
     "@rkludington"
   ],
