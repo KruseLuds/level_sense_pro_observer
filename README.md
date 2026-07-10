@@ -4,7 +4,7 @@
 
 **Full Local Visibility. Full Cloud Functionality.**
 
-**Have your cake and eat it too.**
+**The Best of Both Worlds!**
 
 Level Sense Pro Observer is a Home Assistant custom integration that
 adds detailed local monitoring for a Level Sense Pro while preserving
